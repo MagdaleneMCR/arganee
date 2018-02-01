@@ -2166,16 +2166,16 @@
 			margin: 1em 0 0 0;
 		}
 
-	body.homepage #header {
+	body.home #header {
 		height: 100vh;
 		min-height: 40em;
 	}
 
-		body.homepage #header h1 {
+		body.home #header h1 {
 			font-size: 4em;
 		}
 
-		body.homepage #header:after {
+		body. #header:after {
 			content: '';
 			background: #1C0920;
 			display: block;
@@ -2195,7 +2195,7 @@
 			transition-delay: 0.5s;
 		}
 
-	body.homepage.is-loading #header:after {
+	body.home.is-loading #header:after {
 		opacity: 1;
 	}
 
@@ -2974,17 +2974,17 @@
 					margin-bottom: 2.5em;
 				}
 
-			body.homepage #header {
+			body.home #header {
 				min-height: 0;
 				padding: 5.5em 0 5em 0;
 				height: auto;
 			}
 
-				body.homepage #header:before {
+				body.home #header:before {
 					display: none;
 				}
 
-				body.homepage #header h1 {
+				body.home #header h1 {
 					font-size: 2.5em;
 				}
 

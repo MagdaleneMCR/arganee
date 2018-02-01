@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-	<body class="homepage">
+	<!--body class="homepage">
 		<div id="page-wrapper">
 
-			<!-- Header -->
+			<!-- Header - ->
 				<div id="header">
 
-					<!-- Inner -->
+					<!-- Inner - ->
 						<div class="inner">
 							<header>
 								<h1><a href="index.html" id="logo"><?php bloginfo( 'name' ); ?></a></h1>
@@ -19,7 +19,7 @@
 							</footer>
 						</div>
 
-					<!-- Nav -->
+					<!-- Nav - ->
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Home</a></li>
@@ -47,7 +47,21 @@
 							</ul>
 						</nav>
 
-				</div>
+				</div-->
+
+				<!-- Inner -->
+					<div class="inner">
+						<header>
+							<h1><a href="index.html" id="logo"><?php bloginfo( 'name' ); ?></a></h1>
+							<hr />
+							<p><?php bloginfo( 'description' ); ?></p>
+						</header>
+						<?php wp_head(); ?>
+						<footer>
+							<a href="#banner" class="button circled scrolly">Start</a>
+						</footer>
+					</div>
+		</div>
 
 			<!-- Banner -->
 				<section id="banner">
