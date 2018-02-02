@@ -83,25 +83,7 @@
 							<h2 class="icon fa-camera circled"><span class="label">Photos</span></h2>
 						</header>
 						<div class="row 25%">
-							<div class="6u">
-								<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-							</div>
-							<div class="6u$">
-								<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-							</div>
-							<div class="6u">
-								<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-							</div>
-							<div class="6u$">
-								<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-							</div>
-							<div class="6u">
-								<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-							</div>
-							<div class="6u$">
-								<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-							</div>
-						</div>
+
 					</section>
 
 			</div>
@@ -111,18 +93,7 @@
 
 					<!-- Contact -->
 						<section class="contact">
-							<header>
-								<h3>Nisl turpis nascetur interdum?</h3>
-							</header>
-							<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
-							<ul class="icons">
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-								<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-							</ul>
+								<?php dynamic_sidebar( 'right-sidebar' );?>
 						</section>
 
 					<!-- Copyright -->

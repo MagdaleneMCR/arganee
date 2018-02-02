@@ -190,6 +190,7 @@
 
 				</div>
 
+
 			<!-- Features -->
 				<div class="wrapper style1">
 
@@ -232,5 +233,4 @@
 						</div>
 					</section>
 
-				</div>
 <?php get_footer(); ?>
