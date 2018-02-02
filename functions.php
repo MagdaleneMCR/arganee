@@ -28,6 +28,47 @@ function my_em_posttype_cat_default($EM_Object){
     }
 add_action('template_redirect','my_em_posttype_cat_default', 1,1);
 
+/**
+ * Theme Setup
+ */
+function academica_setup() {
+
+	// Custom Background
+	add_theme_support( 'custom-background' );
+
+	// Custom Menus
+	register_nav_menus( array(
+		'primary' => __( 'Top Menu', 'academica' ),
+		'footer'  => __( 'Footer Menu', 'academica' ),
+	) );
+
+	// Featured Image
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 120, 80, true ); // Normal post thumbnails
+	add_image_size( 'academica-featured-thumb', 960, 300, true );
+	add_image_size( 'academica-gallery', 300, 225, true );
+
+	// Post Formats
+	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+
+	// Feed Links
+	add_theme_support( 'automatic-feed-links' );
+
+	add_theme_support( 'featured-content', array(
+		'featured_content_filter' => 'academica_get_featured_posts',
+		'description'             => __( 'The featured content section displays on the front page above the first post in the content area.', 'academica' ),
+		'max_posts'               => 10,
+	) );
+
+	add_theme_support( 'infinite-scroll', array(
+		'footer_widgets' => 'sidebar-9',
+		'container'      => 'column-content',
+		'wrapper'        => false,
+		'footer'         => 'footer',
+	) );
+}
+add_action( 'after_setup_theme', 'academica_setup' );
+
 
 function replace_howdy( $wp_admin_bar ) {
  $my_account=$wp_admin_bar->get_node('my-account');
@@ -124,87 +165,48 @@ function academica_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar: Left', 'academica' ),
 		'id'            => 'sidebar-1',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+	   ) );
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Right', 'academica' ),
-		'id'            => 'sidebar-2',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+               	register_sidebar( array(
+               		'name'          => __( 'Sidebar: Right', 'academica' ),
+               		'id'            => 'sidebar-2',
+               	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Homepage (Left)', 'academica' ),
-		'id'            => 'sidebar-6',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+               	register_sidebar( array(
+               		'name'          => __( 'Sidebar: Homepage (Left)', 'academica' ),
+               		'id'            => 'sidebar-6',
+               	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Homepage (Right)', 'academica' ),
-		'id'            => 'sidebar-7',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+               	register_sidebar( array(
+               		'name'          => __( 'Sidebar: Homepage (Right)', 'academica' ),
+               		'id'            => 'sidebar-7',
+               	) ); // BAD GUY
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Homepage (Middle)', 'academica' ),
-		'id'            => 'sidebar-8',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2>',
-		'after_title'   => '</h2>',
-	) );
+               	register_sidebar( array(
+               		'name'          => __( 'Sidebar: Homepage (Middle)', 'academica' ),
+               		'id'            => 'sidebar-8',
+               	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Archive Pages', 'academica' ),
-		'id'            => 'sidebar-3',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+                   register_sidebar( array(
+               		'name'          => __( 'Sidebar: Archive Pages', 'academica' ),
+               		'id'            => 'sidebar-3',
+               	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Pages (Left)', 'academica' ),
-		'id'            => 'sidebar-4',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+                   register_sidebar( array(
+               		'name'          => __( 'Sidebar: Pages (Left)', 'academica' ),
+               		'id'            => 'sidebar-4',
+               	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Sidebar: Pages (Right)', 'academica' ),
-		'id'            => 'sidebar-5',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
+               	register_sidebar( array(
+               		'name'          => __( 'Sidebar: Pages (Right)', 'academica' ),
+               		'id'            => 'sidebar-5',
+               	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Footer', 'academica' ),
-		'id'            => 'sidebar-9',
-		'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="heading">',
-		'after_title'   => '</h3>',
-	) );
 
 	// Custom Theme Widget
 	//require_once get_template_directory() . '/inc/widgets.php';
 }
 add_action( 'widgets_init', 'academica_widgets_init' );
+
 
 ?>

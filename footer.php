@@ -16,7 +16,7 @@
 						<header>
 							<h2 class="icon fa-file circled"><span class="label">Posts</span></h2>
 						</header>
-							<?php dynamic_sidebar( 'sidebar-7' );?>
+							<!--?php dynamic_sidebar( 'sidebar-7' );?-->
 					</section>
 
 				<!-- Photos -->

@@ -126,9 +126,6 @@
 					</div>
 				</section-->
 
-
-            <?php dynamic_sidebar( 'sidebar-3' );?>
-            <?php dynamic_sidebar( 'sidebar-4' );?>
                 </div>
 
 <?php get_footer(); ?>
