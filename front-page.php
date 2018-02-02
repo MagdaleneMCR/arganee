@@ -127,17 +127,8 @@
 				</section-->
 
 
-                <div class="column column-narrow column-last">
-                    <?php dynamic_sidebar( 'sidebar-3' ); ?>
-                </div><!-- end .column-narrow -->
-            <?php dynamic_sidebar( 'left-sidebar' ); ?>
-            <?php dynamic_sidebar( 'sidebar-2' );?>
             <?php dynamic_sidebar( 'sidebar-3' );?>
             <?php dynamic_sidebar( 'sidebar-4' );?>
-            <?php dynamic_sidebar( 'sidebar-5' );?>
-            <?php dynamic_sidebar( 'sidebar-6' );?>
-            <?php dynamic_sidebar( 'sidebar-7' );?>
-            <?php dynamic_sidebar( 'sidebar-8' );?>
                 </div>
 
 <?php get_footer(); ?>
