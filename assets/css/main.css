@@ -2096,7 +2096,7 @@
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		//background-image: url("../../images/header.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2586,7 +2586,7 @@
 		/* Header */
 
 			#header {
-				background-attachment: scroll;
+				background-attachment: fixed;
 			}
 
 				#header .inner {
@@ -2951,7 +2951,7 @@
 		/* Header */
 
 			#header {
-				background-attachment: scroll;
+				background-attachment: fixed;
 				padding: 2.5em 0 0 0;
 			}
 

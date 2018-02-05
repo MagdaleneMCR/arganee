@@ -27,12 +27,15 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
-			<?php $header_image = get_header_image(); ?>
+	<body <?php body_class(); ?>> <!--?php body_class(); ?> -->
+			<!--?php $header_image = get_header_image(); ?-->
+			<!--?php echo esc_url( get_header_image() ); ?-->
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+				<!--div id="header" background-image="<?php echo( get_header_image() ); ?>" background-attachtment="fixed" -->
+					<!--div id="header" style="background-image:<?php echo get_template_directory_uri(); ?>/images/header.jpg"
+					--><div id="header" style="background-image:  <?php header_image(); ?>">
 
 					<!-- Nav -->
 						<nav id="nav">
