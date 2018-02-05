@@ -203,99 +203,55 @@ function academica_widgets_init() {
 	) );
 
 	// Custom Theme Widget
-	//require_once get_template_directory() . '/inc/widgets.php';
+	//require_once get_template_directory() . '/assets/inc/widgets.php';
 }
 add_action( 'widgets_init', 'academica_widgets_init' );
-
-function academica_default_widgets( $theme ) {
-	if ( 'Academica' == $theme ) return;
-
-	$sidebars = get_option( 'sidebars_widgets' );
-
-	if ( empty( $sidebars['sidebar-1'] ) ) {
-		$pages = get_option( 'widget_pages', array( '_multiwidget' => 1 ) );
-		$pages[2] = array( 'title' => __( 'Start here', 'academica' ) );
-		update_option( 'widget_pages', $pages );
-		$sidebars['sidebar-1'] = array( 0 => 'pages-2' );
-	}
-
-	if ( empty( $sidebars['sidebar-6'] ) ) {
-		$pages = get_option( 'widget_pages', array( '_multiwidget' => 1 ) );
-		$pages[3] = array( 'title' => __( 'Start here', 'academica' ) );
-		update_option( 'widget_pages', $pages );
-		$sidebars['sidebar-6'] = array( 0 => 'pages-3' );
-	}
-
-	if ( empty( $sidebars['sidebar-2'] ) ) {
-		$widget = get_option( 'widget_academica-featured-posts-gallery', array( '_multiwidget' => 1 ) );
-		$widget[2] = array(
-			'title' => __( 'Latest Posts', 'academica' ),
-			'category' => 0,
-			'display' => 'list',
-			'amount' => 4,
-		);
-		update_option( 'widget_academica-featured-posts-gallery', $widget );
-		$sidebars['sidebar-2'] = array( 0 => 'academica-featured-posts-gallery-2' );
-	}
-
-	if ( empty( $sidebars['sidebar-7'] ) ) {
-		$widget = get_option( 'widget_academica-featured-posts-gallery', array( '_multiwidget' => 1 ) );
-		$widget[3] = array(
-			'title' => __( 'Latest Posts', 'academica' ),
-			'category' => 0,
-			'display' => 'list',
-			'amount' => 4,
-		);
-		update_option( 'widget_academica-featured-posts-gallery', $widget );
-		$sidebars['sidebar-7'] = array( 0 => 'academica-featured-posts-gallery-3' );
-	}
-
-	$sidebars['wp_inactive_widgets'] = array();
-	$sidebars['array_version'] = 3;
-
-	update_option( 'sidebars_widgets', $sidebars );
-}
-add_action( 'after_switch_theme', 'academica_default_widgets' );
 
 /**
  * Theme Setup
  */
-function academica_setup() {
+ /**
+  * Theme Setup
+  */
+ function academica_setup() {
 
-	// Custom Background
-	add_theme_support( 'custom-background' );
+ 	// Custom Background
+ 	add_theme_support( 'custom-background' );
 
-	// Custom Menus
-	register_nav_menus( array(
-		'primary' => __( 'Top Menu', 'academica' ),
-		'footer'  => __( 'Footer Menu', 'academica' ),
-	) );
+ 	// Custom Menus
+ 	register_nav_menus( array(
+ 		'primary' => __( 'Top Menu', 'academica' ),
+ 		'footer'  => __( 'Footer Menu', 'academica' ),
+ 	) );
 
-	// Featured Image
-	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 120, 80, true ); // Normal post thumbnails
-	add_image_size( 'academica-featured-thumb', 960, 300, true );
-	add_image_size( 'academica-gallery', 300, 225, true );
+ 	// Featured Image
+ 	add_theme_support( 'post-thumbnails' );
+ 	set_post_thumbnail_size( 120, 80, true ); // Normal post thumbnails
+ 	add_image_size( 'academica-featured-thumb', 960, 300, true );
+ 	add_image_size( 'academica-gallery', 300, 225, true );
 
-	// Post Formats
-	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+ 	// Post Formats
+ 	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
-	// Feed Links
-	add_theme_support( 'automatic-feed-links' );
+ 	// Feed Links
+ 	add_theme_support( 'automatic-feed-links' );
 
-	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'academica_get_featured_posts',
-		'description'             => __( 'The featured content section displays on the front page above the first post in the content area.', 'academica' ),
-		'max_posts'               => 10,
-	) );
+ 	// Theme Options
+ 	//require( get_template_directory() . '/inc/theme-options.php' );
 
-	add_theme_support( 'infinite-scroll', array(
-		'footer_widgets' => 'sidebar-9',
-		'container'      => 'column-content',
-		'wrapper'        => false,
-		'footer'         => 'footer',
-	) );
-}
-add_action( 'after_setup_theme', 'academica_setup' );
+ 	add_theme_support( 'featured-content', array(
+ 		'featured_content_filter' => 'academica_get_featured_posts',
+ 		'description'             => __( 'The featured content section displays on the front page above the first post in the content area.', 'academica' ),
+ 		'max_posts'               => 10,
+ 	) );
+
+ 	add_theme_support( 'infinite-scroll', array(
+ 		'footer_widgets' => 'sidebar-9',
+ 		'container'      => 'column-content',
+ 		'wrapper'        => false,
+ 		'footer'         => 'footer',
+ 	) );
+ }
+ add_action( 'after_setup_theme', 'academica_setup' );
 
 ?>
