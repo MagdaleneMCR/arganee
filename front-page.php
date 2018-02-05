@@ -3,13 +3,13 @@
 				<!-- Inner -->
 					<div class="inner">
 						<header>
-							<h1><a href="index.html" id="logo"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1><a href="index.php" id="logo"><?php bloginfo( 'name' ); ?></a></h1>
 							<hr />
 							<p><?php bloginfo( 'description' ); ?></p>
 						</header>
 						<?php wp_head(); ?>
 						<footer>
-							<a href="#banner" class="button circled scrolly">Start</a>
+							<a href="#banner" class="scrolly"><i class="fa fa-chevron-down fa-4x"></i></a>
 						</footer>
 					</div>
 		</div>
@@ -17,8 +17,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-
-                    <?php
+                        <?php
                             if ( is_page() ) :
 
                                 if ( have_posts() )
@@ -36,7 +35,7 @@
 
 
                             endif;  ?>
-					</header>
+                    </header>
 				</section>
 
 			<!-- Carousel >
