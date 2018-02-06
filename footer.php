@@ -4,7 +4,7 @@
 			<div class="row">
 
 				<!-- Tweets -->
-					<section class="4u 12u(mobile)">
+					<section class="6u 12u(mobile)">
 						<header>
 							<h2 class="icon fa-twitter circled"><span class="label">Tweets</span></h2>
 						</header>
@@ -12,21 +12,21 @@
 						</section>
 
 				<!-- Posts -->
-					<section class="4u 12u(mobile)">
+				<section class="6u 12u(mobile)">
 						<header>
 							<h2 class="icon fa-file circled"><span class="label">Posts</span></h2>
 						</header>
 							<!--?php dynamic_sidebar( 'sidebar-7' );?-->
 					</section>
 
-				<!-- Photos -->
+				<!-- Photos >
 					<section class="4u 12u(mobile)">
 						<header>
 							<h2 class="icon fa-camera circled"><span class="label">Photos</span></h2>
 						</header>
 						<div class="row 25%">
 
-					</section>
+					</section-->
 
 			</div>
 			<hr />
