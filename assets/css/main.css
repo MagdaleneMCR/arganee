@@ -2180,7 +2180,7 @@
 			font-size: 4em;
 		}
 
-		body. #header:after {
+		body.home #header:after {
 			content: '';
 			background: #301941; //1C0920
 			display: block;

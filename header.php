@@ -27,7 +27,7 @@
 
 	</head>
 
-	<body class="homepage">
+	<body <?php body_class(); ?>> <!--?php body_class(); ?> -->
 			<?php $header_image = get_header_image(); ?>
 		<div id="page-wrapper">
 
