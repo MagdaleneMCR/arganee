@@ -35,7 +35,7 @@
 			<!-- Header -->
 				<!--div id="header" background-image="<?php echo( get_header_image() ); ?>" background-attachtment="fixed" -->
 					<!--div id="header" style="background-image:<?php echo get_template_directory_uri(); ?>/images/header.jpg"
-					--><div id="header" style="background-image:  <?php header_image(); ?>">
+					--><div id="header">
 
 					<!-- Nav -->
 						<nav id="nav">
