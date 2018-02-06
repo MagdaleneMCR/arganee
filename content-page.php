@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Academica
+ * @package wp-magd-helios
 */
 ?>
 

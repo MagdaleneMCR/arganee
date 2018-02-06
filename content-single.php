@@ -1,12 +1,13 @@
 <?php
 /**
- * @package Academica
+ * @package @package wp-magd-helios
+ * Modified for Helios
 */
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<!--div id="post-<?php the_ID(); ?>" <?php post_class(); ?>-->
 
-	<div class="entry-content clearfix">
+	<!--div class="entry-content clearfix"-->
 		<?php
 		the_content();
 		wp_link_pages( array(
@@ -14,7 +15,7 @@
 			'after' => '</p>',
 			'next_or_number' => 'number'
 		) ); ?>
-	</div><!-- end .entry-content -->
+	<!--/div--><!-- end .entry-content -->
 
 	<div class="entry-meta">
 		<?php
@@ -23,4 +24,4 @@
 		edit_post_link( __( 'Edit', 'academica' ), '<span class="edit-link"> / ', '</span>' ); ?>
 	</div><!-- end .entry-meta -->
 
-</div><!-- end #post-## -->
+<!--/div--><!-- end #post-## -->
