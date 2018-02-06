@@ -9,11 +9,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html <?php language_attributes(); ?>>
 	<head>
-		<title>Magdalene MCR Helios</title>
+		<!--title>Magdalene MCR Helios</title-->
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
