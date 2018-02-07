@@ -5,6 +5,7 @@
 ?>
 
 <!--div id="post-<?php the_ID(); ?>" <?php post_class(); ?>-->
+<h2><?php single_post_title(); ?></h2>
 <p>
 	<!--div--> <!--class="entry-content clearfix"-->
 		<?php
