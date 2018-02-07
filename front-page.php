@@ -24,7 +24,7 @@
                                     the_post();
                                     get_template_part( 'content', 'frontpage' );
 
-                                dynamic_sidebar( 'sidebar-8' );
+                                //dynamic_sidebar( 'sidebar-8' );
 
                             elseif ( have_posts() ) :
 
@@ -37,6 +37,17 @@
                             endif;  ?>
                     </header>
 				</section>
+
+				<!-- Main -->
+					<div class="wrapper style2">
+
+						<article id="main" class="container special">
+
+							<?php dynamic_sidebar( 'sidebar-8' );?>
+
+						</article>
+
+					</div>
 
 			<!-- Carousel >
 				<section class="carousel">
