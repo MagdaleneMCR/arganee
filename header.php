@@ -33,6 +33,10 @@
 
 			<!-- Header -->
 				<div id="header">
+						<?php 
+						  // Fix menu overlap
+						  if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>';
+						?>
 
 					<!-- Nav -->
 						<nav id="nav">
