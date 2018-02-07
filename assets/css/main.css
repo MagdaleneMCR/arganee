@@ -3045,3 +3045,61 @@
 					}
 
 	}
+	/* =Reusable Classes
+	-------------------------------------------------------------- */
+
+	.clearfix,
+	.comment-meta: {
+		*zoom: 1;
+	}
+
+	.clearfix:before,
+	.clearfix:after,
+	.comment-meta:before,
+	.comment-meta:after {
+		content: "";
+		display: table;
+		line-height: 0;
+	}
+
+	.clearfix:after,
+	.comment-meta:after {
+		clear: both;
+	}
+
+	.nivo-caption,
+	.assistive-text,
+	#searchform label,
+	.comment-form-comment > label {
+		position: absolute !important;
+		clip: rect(1px, 1px, 1px, 1px);
+	}
+
+	.alignleft {
+		float: left;
+	}
+
+	img.alignleft,
+	.wp-caption.alignleft {
+		margin: 3px 15px 10px 0;
+	}
+
+	.alignright {
+		float: right;
+	}
+
+	img.alignright,
+	.wp-caption.alignright,
+	.gallery-slider {
+		margin: 3px 0 10px 15px;
+	}
+
+	.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	img.aligncenter,
+	.wp-caption.aligncenter {
+		margin: 3px auto 10px;
+	}
