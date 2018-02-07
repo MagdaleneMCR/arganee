@@ -1,7 +1,14 @@
 <?php get_header(); ?>
 
+<div class="inner">
+	<header>
+		<h1><a d="logo"><?php single_post_title(); ?></a></h1>
+	</header>
+</div>
 
 </div> <!--ends headers-->
+
+
 
 <div class="wrapper style1">
 
